@@ -59,6 +59,7 @@ jobs:
       # laravel env file
       - run: cp env.example .env
       - run: cp env.example .env.testing
+      - run: php artisan key:generate
 
       # run tests with phpunit or codecept
       - run: ./vendor/bin/phpunit
